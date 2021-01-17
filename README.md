@@ -9,6 +9,8 @@ La App en sí lo que hace es gestionar un catálogo de cursos. Las dos funcional
 
 ## Herramientas y librerías
 
+Las librerías son:
+
 * Java 8
 * JSTL 1.2
 * IDE: Eclipse 2020-12 (4.18.0)
@@ -17,6 +19,8 @@ La App en sí lo que hace es gestionar un catálogo de cursos. Las dos funcional
 
 
 ## Patrones de diseño implementados
+
+Los patrones implementados son:
 
 * [FrontController](https://en.wikipedia.org/wiki/Front_controller): Servlet que recibe todas las peticiones y delega en una factoría la creación del comando específico que va a procesar la petición.
 * [Factory](https://en.wikipedia.org/wiki/Factory_method_pattern): El la App el componente que implementa este patrón es el CommandFactory. Su responsabilidad es crear los comandos específicos a partir del path de la petición. Para crear los comandos se apoya en el componente BeanFactory.
