@@ -6,6 +6,7 @@ El objetivo de la App es mostrar el uso de las APIs básicas de java (Servlets, 
 
 La App en sí lo que hace es gestionar un catálogo de cursos. Las dos funcionalidades que se han implementado son el listado y el alta de cursos.
 
+
 ## Herramientas y librerías
 
 * Java 8
@@ -13,6 +14,7 @@ La App en sí lo que hace es gestionar un catálogo de cursos. Las dos funcional
 * IDE: Eclipse 2020-12 (4.18.0)
 * Servidor de aplicación: Tomcat 9
 * Base de datos: H2 version 1.4.196
+
 
 ## Patrones de diseño implementados
 
