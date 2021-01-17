@@ -1,0 +1,94 @@
+{
+	"defs": {
+		"listCoursesCommand": {
+			"beanClass": "com.codetodo.courseapp.controller.command.course.ListCoursesCommand",
+			"singleton": "true",
+			"properties": [
+				{
+					"name": "courseService",
+					"refBean": "courseService"
+				}
+			]
+		},
+		"addCourseCommand": {
+			"beanClass": "com.codetodo.courseapp.controller.command.course.AddCourseCommand",
+			"singleton": "true",
+			"properties": [
+				{
+					"name": "professorService",
+					"refBean": "professorService"
+				}
+			]
+		},
+		"createCourseCommand": {
+			"beanClass": "com.codetodo.courseapp.controller.command.course.CreateCourseCommand",
+			"singleton": "true",
+			"properties": [
+				{
+					"name": "listCoursesCommand",
+					"refBean": "listCoursesCommand"
+				},
+				{
+					"name": "courseService",
+					"refBean": "courseService"
+				}
+			]
+		},
+		"courseService": {
+			"beanClass": "com.codetodo.courseapp.service.course.impl.CourseServiceImpl",
+			"singleton": "true",
+			"properties": [
+				{
+					"name": "courseDAO",
+					"refBean": "courseDAO"
+				}
+			]
+		},
+		"professorService": {
+			"beanClass": "com.codetodo.courseapp.service.professor.impl.ProfessorServiceImpl",
+			"singleton": "true",
+			"properties": [
+				{
+					"name": "professorDAO",
+					"refBean": "professorDAO"
+				}
+			]
+		},
+		"courseDAO": {
+			"beanClass": "com.codetodo.courseapp.dao.course.impl.JDBCCourseDAO",
+			"properties": [
+				{
+					"name": "connectionFactory",
+					"refBean": "connectionFactory"
+				}
+			]		
+		},
+		"professorDAO": {
+			"beanClass": "com.codetodo.courseapp.dao.professor.impl.JDBCProfessorDAO",
+			"properties": [
+				{
+					"name": "connectionFactory",
+					"refBean": "connectionFactory"
+				}
+			]			
+		},
+		"connectionFactory": {
+		    "beanClass": "com.codetodo.courseapp.dao.H2ConnectionFactory",
+			"singleton": "true",
+			"properties": [
+				{
+					"name": "url",
+					"value": "jdbc:h2:~/test"
+				},
+				{
+					"name": "user",
+					"value": "sa"
+				},
+				{
+					"name": "pass",
+					"value": ""
+				}
+			]
+		}
+	}
+}

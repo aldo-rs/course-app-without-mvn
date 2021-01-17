@@ -1,0 +1,17 @@
+.DS_Store
+.idea
+*~
+*.iml
+*.log
+.m2/repository
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+# node files
+**/node_modules/
+**/package-lock.json
+
+target/
